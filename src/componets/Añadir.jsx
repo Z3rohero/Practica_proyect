@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 export const Añadir = () => {
-  const titulo = "anadir pelicula";
+  const tituloComponente = "anadir pelicula";
   const [peliState, setPeliState] = useState({
     titulo: '',
     descripcion: ' '
@@ -10,7 +10,7 @@ export const Añadir = () => {
   const conseguir = e => {
     e.preventDefault();
     let target = e.target;
-   
+
     let titulo = target.titulo.value;
     let descripcion = target.titulo.descripcion;
     //crear objeto de la pelicula 
@@ -24,13 +24,13 @@ export const Añadir = () => {
     console.log(peliState);
 
   }
-  const {titulo,descripcion}=peliState;
-  
+  const { titulo, descripcion } = peliState;
+
   return (
     <div className="add">
-      
-      <h3 className="title">{titulo}</h3>
-      {titulo && descripcion) && ]"has creado la pelicual :" + titulo}
+
+      <h3 className="title">{tituloComponente}</h3>
+      {(titulo && descripcion) && "has creado la pelicula :" + titulo}
       <form onSubmit={conseguir}>
         <input type="text"
           id="titulo"
