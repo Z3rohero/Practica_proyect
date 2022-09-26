@@ -24,10 +24,13 @@ export const Añadir = () => {
     console.log(peliState);
 
   }
+  const {titulo,descripcion}=peliState;
+  
   return (
     <div className="add">
-      {peliState.titulo}
+      
       <h3 className="title">{titulo}</h3>
+      {titulo && descripcion) && ]"has creado la pelicual :" + titulo}
       <form onSubmit={conseguir}>
         <input type="text"
           id="titulo"
