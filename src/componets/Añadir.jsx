@@ -4,9 +4,9 @@ export const Añadir = () => {
   const tituloComponente = "anadir pelicula";
   const [peliState, setPeliState] = useState({
     titulo: '',
-    descripcion: ' '
+    descripcion: ''
 
-  })
+  });
   const conseguir = e => {
     e.preventDefault();
     let target = e.target;
@@ -30,7 +30,10 @@ export const Añadir = () => {
     <div className="add">
 
       <h3 className="title">{tituloComponente}</h3>
-      {(titulo && descripcion) && "has creado la pelicula :" + titulo}
+      <strong>
+        {(titulo && descripcion) && "has creado la pelicula :" + titulo}
+      </strong>
+
       <form onSubmit={conseguir}>
         <input type="text"
           id="titulo"
