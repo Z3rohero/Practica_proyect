@@ -1,0 +1,48 @@
+import React, { useState } from "react"
+
+export const Añadir = () => {
+  const titulo = "anadir pelicula";
+  const [peliState, setPeliState] = useState({
+    titulo: '',
+    descripcion: ' '
+
+  })
+  const conseguir = e => {
+    e.preventDefault();
+    let target = e.target;
+   
+    let titulo = target.titulo.value;
+    let descripcion = target.titulo.descripcion;
+    //crear objeto de la pelicula 
+    let peli = {
+      // etsa funcion getTime obtner la 
+      id: new Date().getTime(),
+      titulo,
+      descripcion
+    };
+    setPeliState(peli);
+    console.log(peliState);
+
+  }
+  return (
+    <div className="add">
+      {peliState.titulo}
+      <h3 className="title">{titulo}</h3>
+      <form onSubmit={conseguir}>
+        <input type="text"
+          id="titulo"
+          name="titulo"
+          placeholder="Titulo" />
+        <textarea
+          id="descripcion"
+          name="descripcion"
+          placeholder="Descripción">
+        </textarea>
+        <input type="submit"
+          id="save"
+          value="Guardar" />
+      </form>
+    </div>
+
+  )
+}
