@@ -141,6 +141,9 @@ input[type="button"]{
 .peli-item .delete:hover{
     background: #9b0202;
 }
+.peli-item .edit{
+  margin-right:7px;
+}
 
 /*ESTILOS BARRA LATERAL*/
 

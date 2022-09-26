@@ -1,4 +1,5 @@
 import './App.css'
+import {Listado} from "./componets/Listado"
 
 export default function App() {
   return (
@@ -25,44 +26,7 @@ export default function App() {
         </nav>
 
         {/*<!--Contenido principal-->*/}
-        <section id="content" class="content">
-
-          {/* <!--aqui van las peliculas-->*/}
-          <article className="peli-item">
-            <h3 className="title">Desarrollo web</h3>
-            <p className="description">vzero_hero</p>
-
-            <button className="edit">Editar</button>
-            <button className="delete">Borrar</button>
-          </article>
-
-          <article className="peli-item">
-            <h3 className="title">Desarrollo web</h3>
-            <p className="description">zero_hero</p>
-
-            <button className="edit">Editar</button>
-            <button className="delete">Borrar</button>
-          </article>
-
-          <article className="peli-item">
-            <h3 className="title">Desarrollo web</h3>
-            <p className="description">zero_hero</p>
-
-            <button className="edit">Editar</button>
-            <button className="delete">Borrar</button>
-          </article>
-
-          <article className="peli-item">
-            <h3 className="title">Desarrollo web</h3>
-            <p className="description">zero_hero</p>
-
-            <button className="edit">Editar</button>
-            <button className="delete">Borrar</button>
-          </article>
-
-
-
-        </section>
+        <Listado/>
 
         {/*<!--Barra lateral-->*/}
         <aside className="lateral">
